@@ -1,6 +1,6 @@
 # Issues
 
-**TODO: Add description**
+CLI to get de n last issues from a user and repo
 
 ## Installation
 
