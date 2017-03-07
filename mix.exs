@@ -4,7 +4,9 @@ defmodule Issues.Mixfile do
   def project do
     [app: :issues,
      escript: escript_config,
-     version: "0.1.0",
+     version: "0.0.1",
+     name: "Issues by @enoliglesias",
+     source_url: "https://github.com/enoliglesias/issues",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -29,8 +31,10 @@ defmodule Issues.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      httpoison:  "~> 0.9",
-      poison:     "~> 2.2"
+      {:httpoison,  "~> 0.9"},
+      {:poison,     "~> 2.2"},
+      {:ex_doc,     "~> 0.12"},
+      {:earmark,    "~> 1.0", override: true}
     ]
   end
 
